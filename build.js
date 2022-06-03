@@ -11,6 +11,17 @@ async function main() {
   await fs.remove("dist");
   await fs.outputJson(".vercel/output/config.json", {
     version: 3,
+    // Add CORS just for demo purposes
+    routes: [
+      {
+        src: "/(.+)?",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "*",
+          "Access-Control-Allow-Methods": "*",
+        },
+      },
+    ],
   });
 
   const files = await globby(["gql/*.js"]);
