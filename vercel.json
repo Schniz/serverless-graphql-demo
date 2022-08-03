@@ -1,9 +1,0 @@
-{
-  "build": {
-    "env": {
-      "ENABLE_VC_BUILD": "1",
-      "VERCEL_DEBUG": "1",
-      "VERCEL_EDGE_FUNCTIONS_BRIDGE_PKG": "https://edge-functions-bridge-01-nextjs-middleware-dyj2qq7v4.vercel.app"
-    }
-  }
-}
